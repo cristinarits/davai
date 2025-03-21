@@ -6,20 +6,23 @@ import HeroComponent from "@/components/HeroComponent";
 
 export default function Home() {
   return (
-    <div>
-      <HeroComponent />
+    <>
+      <section id="home">
+        <HeroComponent />
+      </section>
 
-      <div className="text-center mt-16">
-        <h2 className="text-4xl font-bold text-black mb-4">This is Davai</h2>
-        <Image
-          src="https://cpyxqewlkqmiuwwmlzaz.supabase.co/storage/v1/object/public/pictures/albert.jpg"
-          alt="that's me btw"
-          width={300}
-          height={300}
-          className="rounded-lg shadow-lg mt-4 mx-auto"
-        />
-      </div>
-    </div>
-    
+      <section id="about" className="py-32 bg-gray-100">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4">About Us</h2>
+        </div>
+      </section>
+
+      <section id="contact" className="py-32 bg-white">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4">Contact</h2>
+          <p className="text-lg text-gray-700 max-w-xl mx-auto">Get in touch via email or socials.</p>
+        </div>
+      </section>
+    </>
   );
 }

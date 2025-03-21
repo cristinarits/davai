@@ -31,8 +31,8 @@ export default function Navbar() {
         </Link>
         <div className="space-x-6">
           <Link href="/" className="text-gray-700 hover:text-amber-300 transition">{t("nav.play")}</Link>
-          <Link href="/about" className="text-gray-700 hover:text-gray-300 transition">{t("nav.about")}</Link>
-          <Link href="/gallery" className="text-gray-700 hover:text-black transition">{t("nav.contact")}</Link>
+          <Link href="#about" className="text-gray-700 hover:text-gray-300 transition">{t("nav.about")}</Link>
+          <Link href="#contact" className="text-gray-700 hover:text-black transition">{t("nav.contact")}</Link>
           <button
             onClick={toggleLanguage}
             className="ml-4 px-4 py-2 bg-purple-700 rounded-lg hover:bg-purple-500 transition">

@@ -31,5 +31,5 @@ const Button = forwardRef<HTMLButtonElement, Button>(
   }
 );
 
-Button.displayName = "Button"; // ✅ This line ensures it's recognized as a component
+Button.displayName = "Button";
 export default Button;
