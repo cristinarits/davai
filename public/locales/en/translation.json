@@ -1,0 +1,16 @@
+{
+    "nav": {
+        "play": "Play",
+        "about": "About Us",
+        "contact": "Contact"
+    },
+    "hero": {
+      "tagline": "Estonian language for Russian speakers",
+      "headline": "Don't Stress, Play and Press!",
+      "description": "Interactive tests and quizzes for learning Estonian with a focus on scientific and biological terminology",
+      "tryNow": "Try Now",
+      "login": "Login",
+      "new": "New"
+    }
+  }
+  

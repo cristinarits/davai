@@ -1,0 +1,15 @@
+{
+    "nav": {
+        "play": "Mängi",
+        "about": "Meist",
+        "contact": "Kontakt"
+    },
+    "hero": {
+        "tagline": "Eesti keel vene keelt kõnelejatele",
+        "headline": "Ära stressa, mängi ja vajuta!",
+        "description": "Interaktiivsed testid ja viktoriinid, mis keskenduvad teaduslikule ja bioloogilisele terminoloogiale",
+        "tryNow": "Proovi kohe",
+        "login": "Logi sisse",
+        "new": "Uus"
+  }
+}
