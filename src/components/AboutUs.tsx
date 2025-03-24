@@ -101,13 +101,13 @@ const AboutUsSection = () => {
           {/* Right side - About Us text */}
           <div className="lg:w-1/3">
             <div className="sticky top-24 space-y-6">
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-custom-yellow">
+              <h2 className="text-4xl md:text-5xl font-display font-bold text-yellow-400">
                 About Us
               </h2>
-              <p className="text-custom-lightGray/80 text-lg">
+              <p className="text-black text-lg">
                 We are a dedicated team of professionals committed to creating an innovative language learning platform for Russian speakers learning Estonian, with a focus on scientific and educational terminology.
               </p>
-              <p className="text-custom-lightGray/80">
+              <p className="text-black">
                 Our diverse team brings together expertise in education, technology, design, and marketing to create a comprehensive learning experience that makes mastering Estonian both effective and enjoyable.
               </p>
             </div>

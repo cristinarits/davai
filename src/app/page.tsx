@@ -4,12 +4,17 @@ import "./globals.css";
 import Image from "next/image";
 import HeroComponent from "@/components/HeroComponent";
 import AboutUsSection from "@/components/AboutUs";
+import CompanyValues from "@/components/CompanyValues";
 
 export default function Home() {
   return (
     <>
       <section id="home">
         <HeroComponent />
+      </section>
+
+      <section>
+        <CompanyValues />
       </section>
 
       <section id="about">
