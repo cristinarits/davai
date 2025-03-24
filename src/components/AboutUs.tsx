@@ -1,6 +1,9 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "./ui/separator";
-import { Users, Clock, UserPlus, BarChart3, Activity, PenTool, VideoIcon, Target, Lightbulb, Palette, Gamepad2, Globe, Database, ArrowUpRight } from "lucide-react";
+import {
+  Users, Clock, UserPlus, BarChart3, Activity, PenTool, VideoIcon, Target,
+  Lightbulb, Palette, Gamepad2, Globe, Database, ArrowUpRight
+} from "lucide-react";
 
 interface TeamMemberProps {
   name: string;
@@ -32,13 +35,31 @@ const TeamMember = ({ name, role, skills, index }: TeamMemberProps) => {
     return iconMap[skill] || <div className="h-4 w-4" />;
   };
 
+  const imageMap: Record<string, string> = {
+    "Albert Boitsov": "albert.jpg",
+    "Ivan Turapin": "ivan.png",
+    "Hugo Mattias Mõlder": "hugo.png",
+    "Cristina Rits": "cristina.png",
+    "Ivan Vasilyev": "vasja.png",
+  };
+
+  const avatarUrl = imageMap[name]
+    ? `https://cpyxqewlkqmiuwwmlzaz.supabase.co/storage/v1/object/public/pictures/${imageMap[name]}`
+    : undefined;
+
   return (
     <div className="bg-purple-900 border border-purple-500/30 hover:border-yellow-400/50 transition-all duration-300 overflow-hidden group p-6 text-center rounded-lg">
+      <Avatar className="h-24 w-24 mx-auto mb-4 border-2 border-yellow-400 group-hover:border-purple-300 transition-colors">
+        <AvatarImage src={avatarUrl} alt={name} />
+        <AvatarFallback className="bg-purple-700 text-yellow-400 font-bold">
+          {name.split(" ").map((n) => n[0]).join("")}
+        </AvatarFallback>
+      </Avatar>
       <h3 className="text-xl font-semibold text-gray-100 mb-1">{name}</h3>
       <p className="text-yellow-300 text-sm font-medium mb-4">{role}</p>
       <div className="space-y-2 w-full">
         {skills.map((skill, i) => (
-          <div key={i} className="flex items-center space-x-2 text-sm text-gray-300">
+          <div key={i} className="flex items-center space-x-2 text-sm text-gray-300 justify-center">
             {getSkillIcon(skill)}
             <span>{skill}</span>
           </div>
@@ -47,8 +68,6 @@ const TeamMember = ({ name, role, skills, index }: TeamMemberProps) => {
     </div>
   );
 };
-
-
 
 const AboutUsSection = () => {
   const teamMembers = [
@@ -85,13 +104,13 @@ const AboutUsSection = () => {
   ];
 
   return (
-    <section id="about-us" className="py-20 bg-custom-darkBlue border-t border-custom-purple/20">
+    <section id="about-us" className="py-20 bg-purple-950 border-t border-purple-800">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           {/* Left side - Team members grid */}
           <div className="lg:w-2/3 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 stagger-animation">
             {teamMembers.map((member, index) => (
-              <TeamMember 
+              <TeamMember
                 key={index}
                 {...member}
               />
@@ -104,10 +123,10 @@ const AboutUsSection = () => {
               <h2 className="text-4xl md:text-5xl font-display font-bold text-yellow-400">
                 About Us
               </h2>
-              <p className="text-black text-lg">
+              <p className="text-white text-lg">
                 We are a dedicated team of professionals committed to creating an innovative language learning platform for Russian speakers learning Estonian, with a focus on scientific and educational terminology.
               </p>
-              <p className="text-black">
+              <p className="text-white">
                 Our diverse team brings together expertise in education, technology, design, and marketing to create a comprehensive learning experience that makes mastering Estonian both effective and enjoyable.
               </p>
             </div>
