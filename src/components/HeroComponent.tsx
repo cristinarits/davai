@@ -24,10 +24,11 @@ const HeroComponent = () => {
 
       <div className="container mx-auto max-w-6xl z-10 pt-24 pb-16">
         <div className="text-center max-w-3xl mx-auto">
-          <div className={`reveal-sequential ${mounted ? 'opacity-100' : 'opacity-0'}`}>
-            <p className="text-4xl sm:text-5xl md:text-6xl font-display font-bold leading-tight mb-6 tracking-tight text-balance text-white">
+          {mounted && (
+          <div className="reveal-sequential opacity-100">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold leading-tight mb-6 tracking-tight text-balance text-white">
               {t("hero.headline")}
-            </p>
+            </h1>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" className="group bg-yellow-400 text-purple-900 hover:bg-yellow-300">
                 {t("hero.tryNow")}
@@ -42,6 +43,7 @@ const HeroComponent = () => {
               </Button>
             </div>
           </div>
+          )}
         </div>
       </div>
     </div>

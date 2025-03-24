@@ -5,12 +5,22 @@ import Image from "next/image";
 import HeroComponent from "@/components/HeroComponent";
 import AboutUsSection from "@/components/AboutUs";
 import CompanyValues from "@/components/CompanyValues";
+import ProblemSolution from "@/components/ProblemSolution";
+import MissionVision from "@/components/MissionVision";
 
 export default function Home() {
   return (
     <>
       <section id="home">
         <HeroComponent />
+      </section>
+
+      <section>
+        <ProblemSolution />
+      </section>
+
+      <section>
+        <MissionVision />
       </section>
 
       <section>
