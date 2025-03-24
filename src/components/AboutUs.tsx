@@ -36,11 +36,11 @@ const TeamMember = ({ name, role, skills, index }: TeamMemberProps) => {
   };
 
   const imageMap: Record<string, string> = {
-    "Albert Boitsov": "albert.jpg",
-    "Ivan Turapin": "ivan.png",
-    "Hugo Mattias Mõlder": "hugo.png",
-    "Cristina Rits": "cristina.png",
-    "Ivan Vasilyev": "vasja.png",
+    "Albert Boitsov": "albertt.jpg",
+    "Ivan Turapin": "ivann.png",
+    "Hugo Mattias Mõlder": "hugoo.png",
+    "Cristina Rits": "cristinaa.png",
+    "Ivan Vasilyev": "vasjaa.png",
   };
 
   const avatarUrl = imageMap[name]
@@ -48,18 +48,18 @@ const TeamMember = ({ name, role, skills, index }: TeamMemberProps) => {
     : undefined;
 
   return (
-    <div className="bg-purple-900 border border-purple-500/30 hover:border-yellow-400/50 transition-all duration-300 overflow-hidden group p-6 text-center rounded-lg">
+    <div className="bg-gray-100 border border-purple-500/30 hover:border-yellow-400/50 transition-all duration-300 overflow-hidden group p-6 text-center rounded-lg">
       <Avatar className="h-24 w-24 mx-auto mb-4 border-2 border-yellow-400 group-hover:border-purple-300 transition-colors">
         <AvatarImage src={avatarUrl} alt={name} />
         <AvatarFallback className="bg-purple-700 text-yellow-400 font-bold">
           {name.split(" ").map((n) => n[0]).join("")}
         </AvatarFallback>
       </Avatar>
-      <h3 className="text-xl font-semibold text-gray-100 mb-1">{name}</h3>
-      <p className="text-yellow-300 text-sm font-medium mb-4">{role}</p>
+      <h3 className="text-xl font-semibold text-black mb-1">{name}</h3>
+      <p className="text-purple-900 text-sm font-medium mb-4">{role}</p>
       <div className="space-y-2 w-full">
         {skills.map((skill, i) => (
-          <div key={i} className="flex items-center space-x-2 text-sm text-gray-300 justify-center">
+          <div key={i} className="flex items-center space-x-2 text-sm text-black justify-center">
             {getSkillIcon(skill)}
             <span>{skill}</span>
           </div>
@@ -97,14 +97,14 @@ const AboutUsSection = () => {
     },
     {
       name: "Cristina Rits",
-      role: "CTO",
+      role: "Co-Founder & CTO",
       skills: ["Web Development", "Technology Adaptability", "Database Management"],
       index: 5
     }
   ];
 
   return (
-    <section id="about-us" className="py-20 bg-purple-950 border-t border-purple-800">
+    <section id="about-us" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           {/* Left side - Team members grid */}
@@ -123,10 +123,10 @@ const AboutUsSection = () => {
               <h2 className="text-4xl md:text-5xl font-display font-bold text-yellow-400">
                 About Us
               </h2>
-              <p className="text-white text-lg">
+              <p className="text-black text-lg">
                 We are a dedicated team of professionals committed to creating an innovative language learning platform for Russian speakers learning Estonian, with a focus on scientific and educational terminology.
               </p>
-              <p className="text-white">
+              <p className="text-black">
                 Our diverse team brings together expertise in education, technology, design, and marketing to create a comprehensive learning experience that makes mastering Estonian both effective and enjoyable.
               </p>
             </div>
