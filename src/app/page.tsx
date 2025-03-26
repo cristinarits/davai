@@ -8,6 +8,7 @@ import CompanyValues from "@/components/CompanyValues";
 import ProblemSolution from "@/components/ProblemSolution";
 import MissionVision from "@/components/MissionVision";
 import ContactSection from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -34,6 +35,10 @@ export default function Home() {
 
       <section id="contact">
         <ContactSection />
+      </section>
+
+      <section>
+        <Footer />
       </section>
     </>
   );

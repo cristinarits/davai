@@ -48,15 +48,15 @@ const TeamMember = ({ name, role, skills, index }: TeamMemberProps) => {
     : undefined;
 
   return (
-    <div className="bg-gray-100 border border-purple-500/30 hover:border-yellow-400/50 transition-all duration-300 overflow-hidden group p-6 text-center rounded-lg">
-      <Avatar className="h-24 w-24 mx-auto mb-4 border-2 border-yellow-400 group-hover:border-purple-300 transition-colors">
+    <div className="bg-white border border-fuchsia-500/30 hover:border-yellow-400/50 transition-all duration-300 overflow-hidden group p-6 text-center rounded-lg">
+      <Avatar className="h-24 w-24 mx-auto mb-4 border-2 border-yellow-400 group-hover:border-fuchsia-300 transition-colors">
         <AvatarImage src={avatarUrl} alt={name} />
-        <AvatarFallback className="bg-purple-700 text-yellow-400 font-bold">
+        <AvatarFallback className="bg-fuchsia-700 text-yellow-400 font-bold">
           {name.split(" ").map((n) => n[0]).join("")}
         </AvatarFallback>
       </Avatar>
       <h3 className="text-xl font-semibold text-black mb-1">{name}</h3>
-      <p className="text-purple-900 text-sm font-medium mb-4">{role}</p>
+      <p className="text-fuchsia-900 text-sm font-medium mb-4">{role}</p>
       <div className="space-y-2 w-full">
         {skills.map((skill, i) => (
           <div key={i} className="flex items-center space-x-2 text-sm text-black justify-center">

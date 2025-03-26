@@ -11,14 +11,14 @@ interface ValueCardProps {
 
 const ValueCard = ({ icon: Icon, title, description, delay }: ValueCardProps) => {
   return (
-    <Card className="bg-white border border-gray-200 hover:border-purple-400 transition-all duration-300 overflow-hidden group shadow-sm hover:shadow-md" style={{ animationDelay: `${delay}ms` }}>
+    <Card className="bg-white border border-gray-200 hover:border-fuchsia-400 transition-all duration-300 overflow-hidden group shadow-sm hover:shadow-md" style={{ animationDelay: `${delay}ms` }}>
       <CardContent className="p-6">
         <div className="flex flex-col items-center text-center space-y-4">
-          <div className="h-14 w-14 rounded-full bg-purple-100 flex items-center justify-center transition-colors group-hover:bg-purple-200">
-            <Icon className="h-7 w-7 text-purple-700" />
+          <div className="h-14 w-14 rounded-full bg-fuchsia-100 flex items-center justify-center transition-colors group-hover:bg-fuchsia-200">
+            <Icon className="h-7 w-7 text-fuchsia-900" />
           </div>
 
-          <h3 className="text-xl font-semibold text-purple-700">{title}</h3>
+          <h3 className="text-xl font-semibold text-fuchsia-900">{title}</h3>
           <p className="text-gray-600">{description}</p>
         </div>
       </CardContent>
@@ -28,18 +28,18 @@ const ValueCard = ({ icon: Icon, title, description, delay }: ValueCardProps) =>
 
 const CompanyValues = () => {
   return (
-    <section id="values" className="py-20 bg-white border-t border-gray-100">
+    <section id="values" className="py-20 bg-white border-t border-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-purple-700">Our Values</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-fuchsia-900">Our Values</h2>
+          <p className="text-lg text-black max-w-2xl mx-auto">
             The principles that guide our mission to make language learning effective and enjoyable
           </p>
         </div>
 
         {/* Wiggly Line Journey */}
         <div className="relative mb-16 hidden md:block">
-          <div className="absolute w-full h-20 top-1/2 transform -translate-y-1/2 z-0">
+          <div className="absolute w-full h-20 top-1/2 transform -translate-y-20 z-0">
             <svg viewBox="0 0 1200 100" className="w-full" preserveAspectRatio="none">
               <path 
                 d="M0,50 C150,0 250,100 400,50 C550,0 650,100 800,50 C950,0 1050,100 1200,50" 
@@ -50,10 +50,10 @@ const CompanyValues = () => {
                 className="path"
               />
             </svg>
-            <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-purple-700 text-white rounded-full p-2 text-xs font-bold">
+            <div className="absolute left-0.9 top-11/15 transform -translate-y-1/2 bg-fuchsia-900 text-white rounded-full p-2 text-xs font-bold">
               START
             </div>
-            <div className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-purple-700 text-white rounded-full p-2 text-xs font-bold">
+            <div className="absolute right-0 top-11/12 transform -translate-y-1/2 bg-fuchsia-900 text-white rounded-full p-2 text-xs font-bold">
               FINISH
             </div>
           </div>

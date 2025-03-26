@@ -6,12 +6,12 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: "sm" | "md" | "lg";
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+const ButtonP = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = "default", size = "md", ...props }, ref) => {
     const baseClasses = "flex items-center justify-center rounded-md font-medium transition";
 
     const variantClasses = {
-      default: "bg-yellow-400 text-purple-900 hover:bg-yellow-300",
+      default: "bg-fuchsia text-fuchsia-900 hover:bg-fuchsia-900",
       outline: "border border-yellow-400 text-yellow-400 hover:bg-yellow-100",
       ghost: "hover:bg-gray-100 text-gray-700",
     }[variant];
@@ -32,5 +32,5 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   }
 );
 
-Button.displayName = "Button";
-export { Button };
+ButtonP.displayName = "Button";
+export { ButtonP };

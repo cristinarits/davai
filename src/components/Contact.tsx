@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { ButtonP } from "@/components/ui/buttonpurple";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Phone, Mail, Instagram, Linkedin } from "lucide-react";
@@ -53,20 +53,20 @@ const ContactSection = () => {
           {/* Left side - Contact Info */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-custom-purple">Contact</h2>
-              <p className="text-xl font-medium mb-2">Have a question?</p>
-              <p className="text-gray-600">
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-fuchsia-700">Contact</h2>
+              <p className="text-xl text-black font-medium mb-2">Have a question?</p>
+              <p className="text-black">
                 Help us build better community and break the language barrier.
               </p>
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Social Media</h3>
+              <h3 className="text-lg text-black font-semibold">Social Media</h3>
               <div className="flex space-x-4">
-                <a href="#" className="text-gray-600 hover:text-custom-purple transition-colors">
+                <a href="#" className="text-black hover:text-fuchsia-700 transition-colors">
                   <Instagram className="h-6 w-6" />
                 </a>
-                <a href="#" className="text-gray-600 hover:text-custom-purple transition-colors">
+                <a href="#" className="text-black hover:text-fuchsia-700 transition-colors">
                   <Linkedin className="h-6 w-6" />
                 </a>
               </div>
@@ -74,29 +74,33 @@ const ContactSection = () => {
 
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-custom-purple" />
-                <span className="text-gray-700">+372 5583759</span>
+                <Phone className="h-5 w-5 text-fuchsia-700" />
+                <span className="text-black">+372 5583759</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-custom-purple" />
-                <span className="text-gray-700">DAVAI@DAVAI.DAVAI</span>
+                <Mail className="h-5 w-5 text-fuchsia-700" />
+                <span className="text-black">DAVAI@DAVAI.DAVAI</span>
               </div>
             </div>
           </div>
 
           {/* Right side - Contact Form */}
-          <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
+          <div className="bg-gradient-to-br from-fuchsia-100 via-pink-50 to-white rounded-xl p-8 shadow-md border border-fuchsia-100">
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <FormField
                     control={form.control}
                     name="firstName"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>First Name</FormLabel>
+                        <FormLabel className="text-fuchsia-800 font-semibold">First Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="First name" {...field} />
+                          <Input
+                            placeholder="First name"
+                            className="text-black bg-white border border-fuchsia-300 focus:border-fuchsia-500 focus:ring-fuchsia-500 rounded-lg"
+                            {...field}
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -107,68 +111,81 @@ const ContactSection = () => {
                     name="lastName"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Last Name</FormLabel>
+                        <FormLabel className="text-fuchsia-800 font-semibold">Last Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="Last name" {...field} />
+                          <Input
+                            placeholder="Last name"
+                            className="text-black bg-white border border-fuchsia-300 focus:border-fuchsia-500 focus:ring-fuchsia-500 rounded-lg"
+                            {...field}
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
                   />
                 </div>
-                
+
                 <FormField
                   control={form.control}
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel className="text-fuchsia-800 font-semibold">Email</FormLabel>
                       <FormControl>
-                        <Input type="email" placeholder="Email address" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                
-                <FormField
-                  control={form.control}
-                  name="phone"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Phone</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Phone number" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Message</FormLabel>
-                      <FormControl>
-                        <Textarea 
-                          placeholder="Your message..." 
-                          className="min-h-[120px]"
-                          {...field} 
+                        <Input
+                          type="email"
+                          placeholder="Email address"
+                          className="text-black bg-white border border-fuchsia-300 focus:border-fuchsia-500 focus:ring-fuchsia-500 rounded-lg"
+                          {...field}
                         />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                
-                <Button 
-                  type="submit" 
-                  className="w-full bg-custom-purple text-white hover:bg-custom-purple/90"
+
+                <FormField
+                  control={form.control}
+                  name="phone"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-fuchsia-800 font-semibold">Phone</FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="Phone number"
+                          className="text-black bg-white border border-fuchsia-300 focus:border-fuchsia-500 focus:ring-fuchsia-500 rounded-lg"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-fuchsia-800 font-semibold">Message</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="Your message..."
+                          className="text-black min-h-[120px] bg-white border border-fuchsia-300 focus:border-fuchsia-500 focus:ring-fuchsia-500 rounded-lg"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <ButtonP
+                  type="submit"
+                  className="w-full bg-fuchsia-900 text-white hover:bg-fuchsia-950 font-semibold tracking-wide"
                 >
                   Send Message
-                </Button>
+                </ButtonP>
               </form>
             </Form>
           </div>

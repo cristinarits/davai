@@ -26,16 +26,16 @@ export default function Navbar() {
   return (
     <nav className="bg-white border-b border-gray-200 shadow-sm px-6 py-4">
       <div className="flex items-center justify-between max-w-6xl mx-auto">
-        <Link href="/" className="text-2xl font-bold text-purple-700">
+        <Link href="/" className="text-2xl font-bold text-fuchsia-800">
           DAVAI
         </Link>
         <div className="space-x-6">
-          <Link href="/" className="text-gray-700 hover:text-amber-300 transition">{t("nav.play")}</Link>
-          <Link href="#about" className="text-gray-700 hover:text-gray-300 transition">{t("nav.about")}</Link>
-          <Link href="#contact" className="text-gray-700 hover:text-black transition">{t("nav.contact")}</Link>
+          <Link href="/" className="text-gray-800 hover:text-amber-300 transition">{t("nav.play")}</Link>
+          <Link href="#about" className="text-gray-800 hover:text-gray-300 transition">{t("nav.about")}</Link>
+          <Link href="#contact" className="text-gray-800 hover:text-black transition">{t("nav.contact")}</Link>
           <button
             onClick={toggleLanguage}
-            className="ml-4 px-4 py-2 bg-purple-700 rounded-lg hover:bg-purple-500 transition">
+            className="ml-4 px-4 py-2 bg-fuchsia-800 rounded-lg hover:bg-fuchsia-500 transition">
             {i18n.language === "en" ? "Eesti" : "English"}
           </button>
         </div>
