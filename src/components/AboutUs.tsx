@@ -124,10 +124,7 @@ const AboutUsSection = () => {
                 About Us
               </h2>
               <p className="text-black text-lg">
-                We are a dedicated team of professionals committed to creating an innovative language learning platform for Russian speakers learning Estonian, with a focus on scientific and educational terminology.
-              </p>
-              <p className="text-black">
-                Our diverse team brings together expertise in education, technology, design, and marketing to create a comprehensive learning experience that makes mastering Estonian both effective and enjoyable.
+              We believe that everything we do leaves a footprint and want to ensure ours leads to a better world. In our company, every voice matters, decisions are made openly, and ideas are judged by value. A passion unites us for innovation, self-improvement, and a desire to improve the world.
               </p>
             </div>
           </div>
