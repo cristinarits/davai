@@ -1,5 +1,47 @@
-import ClientHome from "@/components/ClientSections";
+"use client";
+
+import "./globals.css";
+import dynamic from "next/dynamic";
+
+const HeroComponent = dynamic(() => import("@/components/HeroComponent"), { ssr: false });
+const AboutUsSection = dynamic(() => import("@/components/AboutUs"), { ssr: false });
+const ContactSection = dynamic(() => import("@/components/Contact"), { ssr: false });
+
+import CompanyValues from "@/components/CompanyValues";
+import ProblemSolution from "@/components/ProblemSolution";
+import MissionVision from "@/components/MissionVision";
+import Footer from "@/components/Footer";
 
 export default function Home() {
-  return <ClientHome />;
+  return (
+    <>
+      <section id="home">
+        <HeroComponent />
+      </section>
+
+      <section>
+        <ProblemSolution />
+      </section>
+
+      <section>
+        <MissionVision />
+      </section>
+
+      <section>
+        <CompanyValues />
+      </section>
+
+      <section id="about">
+        <AboutUsSection />
+      </section>
+
+      <section id="contact">
+        <ContactSection />
+      </section>
+
+      <section>
+        <Footer />
+      </section>
+    </>
+  );
 }
