@@ -2,7 +2,7 @@
 
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
-import Button from "./ui/button";
+import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 
 const HeroComponent = () => {

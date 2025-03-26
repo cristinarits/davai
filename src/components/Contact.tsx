@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Phone, Mail, Instagram, Linkedin } from "lucide-react";
 import { useForm } from "react-hook-form";
@@ -11,7 +11,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
+} from "./ui/form";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "@/hooks/use-toast";

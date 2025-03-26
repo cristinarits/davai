@@ -7,6 +7,7 @@ import AboutUsSection from "@/components/AboutUs";
 import CompanyValues from "@/components/CompanyValues";
 import ProblemSolution from "@/components/ProblemSolution";
 import MissionVision from "@/components/MissionVision";
+import ContactSection from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -31,11 +32,8 @@ export default function Home() {
         <AboutUsSection />
       </section>
 
-      <section id="contact" className="py-32 bg-white">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Contact</h2>
-          <p className="text-lg text-gray-700 max-w-xl mx-auto">Get in touch via email or socials.</p>
-        </div>
+      <section id="contact">
+        <ContactSection />
       </section>
     </>
   );
