@@ -1,7 +1,6 @@
 "use client";
 
 import "./globals.css";
-import Image from "next/image";
 import HeroComponent from "@/components/HeroComponent";
 import AboutUsSection from "@/components/AboutUs";
 import CompanyValues from "@/components/CompanyValues";

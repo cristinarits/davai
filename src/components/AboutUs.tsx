@@ -1,5 +1,4 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Separator } from "./ui/separator";
 import {
   Users, Clock, UserPlus, BarChart3, Activity, PenTool, VideoIcon, Target,
   Lightbulb, Palette, Gamepad2, Globe, Database, ArrowUpRight
@@ -9,10 +8,9 @@ interface TeamMemberProps {
   name: string;
   role: string;
   skills: string[];
-  index: number;
 }
 
-const TeamMember = ({ name, role, skills, index }: TeamMemberProps) => {
+const TeamMember = ({ name, role, skills}: TeamMemberProps) => {
   const getSkillIcon = (skill: string) => {
     const iconMap: Record<string, React.ReactNode> = {
       "Interpersonal Skills": <Users className="h-4 w-4 text-yellow-400" />,
