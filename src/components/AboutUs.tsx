@@ -59,7 +59,7 @@ const TeamMember = ({ name, role, skills }: TeamMemberProps) => {
     : undefined;
 
   return (
-    <div className="bg-white border border-fuchsia-500/30 hover:border-yellow-400/50 transition-all duration-300 overflow-hidden group p-6 text-center rounded-lg">
+    <div className="bg-white border border-fuchsia-500/30 hover:border-yellow-400/50 transition-all duration-300 overflow-hidden group p-6 text-center rounded-lg h-full flex flex-col justify-start">
       <Avatar className="h-24 w-24 mx-auto mb-4 border-2 border-yellow-400 group-hover:border-fuchsia-300 transition-colors">
         <AvatarImage src={avatarUrl} alt={name} />
         <AvatarFallback className="bg-fuchsia-700 text-yellow-400 font-bold">
@@ -140,7 +140,7 @@ const AboutUsSection = () => {
           </div>
 
           {/* About Us text */}
-          <div className="lg:w-1/3">
+          <div className="lg:w-157">
             <div className="sticky top-24 space-y-6">
               <h2 className="text-4xl md:text-5xl font-display font-bold text-yellow-400">
                 About Us
