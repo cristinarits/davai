@@ -22,6 +22,14 @@ export default function Home() {
       <section>
         <ProblemSolution />
       </section>
+      {/* Biology Picture */}
+      <div className="py-12 bg-white">
+        <img
+        src="https://cpyxqewlkqmiuwwmlzaz.supabase.co/storage/v1/object/public/pictures//davainew.png"
+        alt="Illustration"
+        className="w-300 h-auto rounded-xl mb-12 mx-auto"
+        />
+        </div>
 
       <section>
         <MissionVision />

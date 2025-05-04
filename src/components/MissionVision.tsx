@@ -7,11 +7,6 @@ const MissionVision = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Mission */}
           <div>
-            <img
-              src="https://cpyxqewlkqmiuwwmlzaz.supabase.co/storage/v1/object/public/pictures//ueban.png"
-              alt="Mission Illustration"
-              className="w-90 h-auto rounded-xl mb-6 ml-20"
-            />
             <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
               <h2 className="text-2xl md:text-3xl font-display font-bold mb-4 text-fuchsia-800">
                 Mission
@@ -24,11 +19,6 @@ const MissionVision = () => {
 
           {/* Vision */}
           <div>
-            <img
-              src="https://cpyxqewlkqmiuwwmlzaz.supabase.co/storage/v1/object/public/pictures//ueban2.png"
-              alt="Vision Illustration"
-              className="w-73 h-auto rounded-xl mb-6 ml-30"
-            />
             <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
               <h2 className="text-2xl md:text-3xl font-display font-bold mb-4 text-fuchsia-800">
                 Vision

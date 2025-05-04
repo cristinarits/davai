@@ -6,4 +6,4 @@ export default function NotFound() {
     );
   }
   
-  export const dynamic = "force-dynamic"; // <-- optional but safe  
+  export const dynamic = "force-dynamic";
