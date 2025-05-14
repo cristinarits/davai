@@ -106,21 +106,6 @@ const AboutUsSection = () => {
       name: "Cristina Rits",
       role: "Co-Founder & CTO",
       skills: ["Web Development", "Technology Adaptability", "Database Management"],
-    },
-    {
-      name: "Nico A Venkataramani",
-      role: "Business Development",
-      skills: ["Marketing", "Innovations", "Tech design specialisation"],
-    },
-    {
-      name: "Umut Can A.",
-      role: "Project Manager",
-      skills: ["Operations", "Project Management", "Customer Experience"],
-    },
-    {
-      name: "Red Valenzuela",
-      role: "AI Engineer",
-      skills: ["Artificial Intelligence", "Machine Learning", "System Architecture"],
     }
   ];
 
